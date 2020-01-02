@@ -11,7 +11,7 @@
  
  * Model code as multiple concurrent streams of events/data happening at the same time
  
- ## A quick exposre to RxJava
+ ## A quick exposure to RxJava
  
  * _Observables_ push data to _Observers_
  * Use _Operators_ between Observables and Observers to transform and manipulate emissions
