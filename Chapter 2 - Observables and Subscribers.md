@@ -6,7 +6,7 @@
 
 An Observable<T> pushes items of type T through a series of operators until it arrives at a final Observer which consumes the item.
 
-## How Observables work
+### How Observables work
 
 An Observable _passes_ three types of events:
 * onNext: pass items one at a time from Observable down to Observer
@@ -14,7 +14,7 @@ An Observable _passes_ three types of events:
 * onError: communicates an Error all they way down to the Observer
 	* _retry_ operators can intercept error events
 
-## Using Observable.create()
+### Using Observable.create()
 
 * the _Source Observable_:
 	* is the Observable where emissons originate from
@@ -26,7 +26,7 @@ An Observable _passes_ three types of events:
 	
 * Adding operations: onNext **pushes** result to the next step, eg. _map_ or _filter_
 
-## Using Observable.just()
+### Using Observable.just()
 
 * Pass up to 10 items, it will call onNext() on each of them and then onComplete()
 * Observable.fromIterable(): onNext() for each item and then OnComplete()
@@ -50,12 +50,12 @@ Observable| -> |Observer |> Observable| -> |Observer
                       Operator
 ```
 
-## Implementing and subscribing to an Observer
+### Implementing and subscribing to an Observer
 
 When subscribing to an Observable, you have to pass in an Observer that will consume the emitted events.
 Calling subscribe on the Observable starts an onNext() call in the source Observable, which is then passed through the chain.
 
-## Shorthand observers with lambdas
+### Shorthand observers with lambdas
 
 * subscribe() can also receive 3 lambdas as parameter
 	* Consumer<T> onNext
@@ -69,4 +69,4 @@ Calling subscribe on the Observable starts an onNext() call in the source Observ
 	* used to decouple an Observable from the Observer
 	* eg. with infinite or long-running Observables
 	* eg. Android Lifecycle
-=
+
